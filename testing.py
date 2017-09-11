@@ -2,7 +2,7 @@ import os
 import pwordgiven
 import time
 
-spamdir='enron1/spam'
+spamdir='enron1/spam'  #training dataset
 hamdir='enron1/ham'
 
 spam_mails=os.listdir(spamdir)
@@ -12,7 +12,7 @@ pos=(len(spam_mails)*1.0)/(len(spam_mails)+len(ham_mails))
 poh=1-pos
 print(pos,poh)
 
-spamdir='enron2/spam'
+spamdir='enron2/spam'   #testing dataset
 hamdir='enron2/ham'
 
 spam_mails=os.listdir(spamdir)
@@ -43,4 +43,4 @@ for i in range(len(spam_mails)):
 	print(i)
 t2=time.time()
 print("Total time taken: %f"%(t2-t1))
-print((correct*1.0)/(correct+incorrect))
+print((correct*1.0)/(correct+incorrect))    # accuracy of the algo on the training dataset
